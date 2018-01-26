@@ -1,0 +1,117 @@
+Input: 
+import java.util.Scanner;
+public class mikeProject3
+{
+   public static void main(String[] args)
+   {
+      int employeeId;
+      int numberSales;
+      double bonusAmount=0;
+      double bonus1;
+      double bonus2;
+      double bonus3;
+      double AverageSales;
+      double totalsales=0;
+      int count=0;
+      count = count + 1;
+      Scanner input = new Scanner(System.in); 
+      System.out.println("Enter employeeId and numberSales all on one line with a space between them and then press enter.");
+      employeeId = input.nextInt();
+      numberSales = input.nextInt();
+      totalsales=totalsales+numberSales;
+      AverageSales=totalsales/count;
+      bonus1=numberSales*.06;
+      bonus2=numberSales*.04;
+      bonus3=numberSales*.00;
+      
+         if (numberSales>1000)
+         {  
+            bonusAmount += bonus3;
+            System.out.printf("%s %d %s %d %s\n", "Congratulations ", employeeId, "on having sales of ", numberSales, "\nYou have exceeded the 1000 sales mark");
+            System.out.printf("%s %.2f\n", "Your bonus is ", bonus1);
+         }
+         else if (numberSales >= 500 && numberSales <= 1000)
+         {
+            bonusAmount += bonus2;
+            System.out.printf("%d %s %d %s\n",employeeId, "had a total sales of ", numberSales, "\nYour goal should be to exceed the 1000 sales mark");
+            System.out.printf("%s %.2f\n", "Your bonus is ", bonus2);
+         }
+         else
+         {  
+            System.out.printf("%d %s %d %s\n",employeeId, "had a total sales of ", numberSales, "\nWork Much harder. Your goal should be to exceed the 1000 sales mark");
+            System.out.printf("%s %.2f\n", "Your bonus is ", bonus3); 
+         }  
+         count = count + 1;
+         employeeId = input.nextInt();
+         numberSales = input.nextInt();
+         totalsales=totalsales+numberSales;
+         AverageSales=totalsales/count;
+         if (numberSales>1000)
+          {
+            bonusAmount += bonus3;
+            System.out.printf("%s %d %s %d %s\n", "Congratulations ", employeeId, "on having sales of ", numberSales, "\nYou have exceeded the 1000 sales mark");
+            System.out.printf("%s %.2f\n", "Your bonus is ", bonus1);
+          } 
+         else if (numberSales >= 500 && numberSales <= 1000)
+          {
+             bonusAmount += bonus2;
+             System.out.printf("%d %s %d %s\n",employeeId, "had a total sales of ", numberSales, "\nYour goal should be to exceed the 1000 sales mark");
+             System.out.printf("%s %.2f\n", "Your bonus is ", bonus2);
+          }
+         else
+          {  
+            System.out.printf("%d %s %d %s\n",employeeId, "had a total sales of ", numberSales, "\nWork Much harder. Your goal should be to exceed the 1000 sales mark");
+            System.out.printf("%s %.2f\n", "Your bonus is ", bonus3); 
+          }
+          
+      employeeId = input.nextInt();
+      numberSales = input.nextInt();
+      totalsales=totalsales+numberSales;
+      count = count + 1;
+      AverageSales=totalsales/count;
+      
+         if (numberSales>1000)
+         {
+            bonusAmount += bonus3;
+            System.out.printf("%s %d %s %d %s\n", "Congratulations ", employeeId, "on having sales of ", numberSales, "\nYou have exceeded the 1000 sales mark");
+      System.out.printf("%s %.2f\n", "Your bonus is ", bonus1);
+         }
+         else if (numberSales >= 500 && numberSales <= 1000)
+         {
+           bonusAmount += bonus2;
+           System.out.printf("%d %s %d %s\n",employeeId, "had a total sales of ", numberSales, "\nYour goal should be to exceed the 1000 sales mark");
+           System.out.printf("%s %.2f\n", "Your bonus is ", bonus2);
+         }
+         else
+         {  
+           System.out.printf("%d %s %d %s\n",employeeId, "had a total sales of ", numberSales, "\nWork Much harder. Your goal should be to exceed the 1000 sales mark");
+           System.out.printf("%s %.2f\n", "Your bonus is ", bonus3); 
+         }   
+    
+        System.out.printf("%s %d\n", "The total number of employees is ", count);
+        System.out.printf("%s %.2f", "\nThe total bonus amount is ", bonusAmount);
+        System.out.printf("%s %.2f", "\nThe total number of sales is ", totalsales);
+        System.out.printf("%s %.2f", "\nThe average number of sales is ", AverageSales);
+   }
+}
+Output
+ ----jGRASP exec: java mikeProject3
+Enter employeeId and numberSales all on one line with a space between them and then press enter.
+1 1500
+Congratulations  1 on having sales of  1500 
+You have exceeded the 1000 sales mark
+Your bonus is  90.00
+2 800
+2 had a total sales of  800 
+Your goal should be to exceed the 1000 sales mark
+Your bonus is  60.00
+3 400
+3 had a total sales of  400 
+Work Much harder. Your goal should be to exceed the 1000 sales mark
+Your bonus is  0.00
+The total number of employees is  3
+
+The total bonus amount is  60.00
+The total number of sales is  2700.00
+The average number of sales is  900.00
+ ----jGRASP: operation complete.
